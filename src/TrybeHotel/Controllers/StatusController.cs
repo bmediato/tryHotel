@@ -10,7 +10,7 @@ namespace TrybeHotel.Controllers
         [HttpGet]
         public IActionResult GetStatus()
         {
-            var response = new { message = 'online' };
+            var response = new { message = "online" };
             return Ok(response);
         }
 
