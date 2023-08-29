@@ -26,9 +26,9 @@ public class TrybeHotelContext : DbContext, ITrybeHotelContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Hotel>()
-                    .HasOne(hotel => hotel.City)
-                    .WithMany(city => city.Hotels)
-                    .HasForeignKey(hotel => hotel.CityId);
+            .HasOne(hotel => hotel.City)
+            .WithMany(city => city.Hotels)
+            .HasForeignKey(hotel => hotel.CityId);
 
         modelBuilder.Entity<Room>()
             .HasOne(room => room.Hotel)
